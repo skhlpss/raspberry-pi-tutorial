@@ -97,7 +97,7 @@ with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
         server = StreamingServer(address, StreamingHandler)
         server.serve_forever()
     finally:
-        camera.stop_recordingt
+        camera.stop_recording()
 ```
 {% endcode %}
 
