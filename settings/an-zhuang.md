@@ -4,7 +4,7 @@
 
 <figure><img src="../.gitbook/assets/IMG_1011.jpeg" alt=""><figcaption><p>取出 SD Card 及 Raspberry Pi</p></figcaption></figure>
 
-將 SD Card 插入 Raspberry Pi 中
+將 SD Card （細咭）插入 Raspberry Pi 中
 
 <figure><img src="../.gitbook/assets/IMG_1012.jpeg" alt=""><figcaption><p>將 SD Card 插入 Raspberry Pi 中</p></figcaption></figure>
 
@@ -20,11 +20,11 @@
 
 <figure><img src="../.gitbook/assets/IMG_1013.jpeg" alt=""><figcaption><p>取出屏幕套件</p></figcaption></figure>
 
-接上帶狀電線 (Ribbon Connector)
+接上帶狀電線 (Ribbon Connector)。注意，需先將插口的兩旁的黑色扣拉出，然後插入帶狀電線，完成後將黑色扣推入，以鎖緊帶狀電線。
 
 <figure><img src="../.gitbook/assets/Raspberry Pi Touch Screen.png" alt=""><figcaption><p>接上帶狀電線 (Ribbon Connector)</p></figcaption></figure>
 
-用紅色連接 5V 至 GPIO 的 5V0， 黑色連接 GND
+用紅色連接 `5V` 至 GPIO 的 `5V0`， 黑色連接 `GND`
 
 <figure><img src="../.gitbook/assets/IMG_1016.jpeg" alt=""><figcaption><p>用紅色連接 5V 至 GPIO 的 5V0， 黑色連接 GND</p></figcaption></figure>
 

@@ -1,9 +1,11 @@
 # Table of contents
 
+* [Raspberry Pi Tutorial](README.md)
+
 ## Introduction
 
-* [QR Code](README.md)
-* [注意事項](introduction/zhu-yi-shi-xiang.md)
+* [QR Code](qr-code.md)
+* [注意事項](zhu-yi-shi-xiang.md)
 
 ## 設定 Raspberry Pi <a href="#settings" id="settings"></a>
 
@@ -32,3 +34,7 @@
 * [DIY 顯微鏡](making-a-microscope/diy-xian-wei-jing.md)
 * [顯微鏡製作步驟](making-a-microscope/xian-wei-jing-zhi-zuo-bu-zhou.md)
 * [編寫程式](making-a-microscope/bian-xie-cheng-shi.md)
+
+## 縮時攝影
+
+* [Timelapse](suo-shi-she-ying/timelapse.md)
