@@ -1,8 +1,9 @@
 # Table of contents
 
-* [Raspberry Pi Tutorial](README.md)
-* [QR Code](qr-code.md)
-* [注意事項](zhu-yi-shi-xiang.md)
+## Introduction
+
+* [QR Code](README.md)
+* [注意事項](introduction/zhu-yi-shi-xiang.md)
 
 ## 設定 Raspberry Pi <a href="#settings" id="settings"></a>
 
