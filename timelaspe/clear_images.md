@@ -1,8 +1,12 @@
 # 清除所有相片
 
-打開 `Terminal`
+以下步驟讓你快捷地清除在 `/home.pi/timelapse` 文件夾中的所有文件。
+
+首先打開 `Terminal`
 
 <figure><img src="../.gitbook/assets/terminal.png" alt=""><figcaption></figcaption></figure>
+
+然後輸入以下指令
 
 ```sh
 # 轉到文件夾
