@@ -103,7 +103,7 @@ with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
 
 打開 `Terminal`&#x20;
 
-<figure><img src="https://lh5.googleusercontent.com/0K4NJg0mejAE91Lj8GA4nrGzC1MIuGnF61mvqWNCgJdlhJYxU8RUF6c6PzYBPppTnDRpGksbiD4yRhkYAHqnGL6-7dsiGoyx44iR62mXWZOlzvg5sP52dWVOWhqRleEfhrxcYOW4U60jq4ddbRvc8iy9Iw=s2048" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/terminal.png" alt=""><figcaption></figcaption></figure>
 
 輸入 `ifconfig` ，以找出 `Raspberry Pi` 連接網絡時的 `IP` 位置。學校是用無線網絡，因此 `IP` 位置可以在 `wlan0` 中找到，`inet` 所示就是 `IP` 位置
 

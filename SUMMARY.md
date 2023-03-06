@@ -38,3 +38,6 @@
 ## 縮時攝影 <a href="#timelaspe" id="timelaspe"></a>
 
 * [簡介](timelaspe/introduction.md)
+* [清除所有相片](timelaspe/qing-chu-suo-you-xiang-pian.md)
+* [拍攝連續照片](timelaspe/pai-she-lian-xu-zhao-pian.md)
+* [將相片轉換成影片](timelaspe/jiang-xiang-pian-zhuan-huan-cheng-ying-pian.md)
