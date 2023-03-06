@@ -16,7 +16,7 @@ preview_button = Button(5)
 capture_button = Button(6)
 captureDir = '/home/pi/timelapse'
 wait = 2 
-no_of_images = 30
+no_of_images = 90
 
 def toggle():
     if camera.preview:
