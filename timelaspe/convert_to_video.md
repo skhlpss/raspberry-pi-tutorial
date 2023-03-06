@@ -2,16 +2,17 @@
 
 <figure><img src="../.gitbook/assets/terminal.png" alt=""><figcaption></figcaption></figure>
 
-打開 `Terminal` 並執行以下程式
+打開 `Terminal` ，安裝所需程式 `imagemagick`
 
 {% code lineNumbers="true" %}
 ```sh
 # 安將所須軟件
-
 sudo apt update
 sudo apt install imagemagick
 ```
 {% endcode %}
+
+打開 `Terminal` 並執行以下程式，以下例子是制作一段 18 FPS 的影片。
 
 ```sh
 cd /home/pi/timelapse

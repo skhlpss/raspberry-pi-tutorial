@@ -1,6 +1,6 @@
 # 拍攝連續照片
 
-&#x20;開新檔案 `continuous_images.py` ，連接 1 個按扭到 `GPIO5` 及 `GPIO6` 。改變 `ln12` 及 `ln13` 中 `wait` 及 `no_of_images` 的數值，
+&#x20;開新檔案 `continuous_images.py` ，連接 1 個按扭到 `GPIO5` 及 `GPIO6` 。改變 `ln14` 及 `ln15` 中 `wait` 及 `no_of_images` 的數值，
 
 {% code title="continuous_images.py" lineNumbers="true" %}
 ```python
@@ -14,15 +14,11 @@ from io import BytesIO
 
 preview_button = Button(5)
 capture_button = Button(6)
+camera = PiCamera()
+
 captureDir = '/home/pi/timelapse'
 wait = 2 
 no_of_images = 90
-
-def toggle():
-    if camera.preview:
-        camera.stop_preview()
-    else:
-        camera.start_preview()
 
 def continuous_capture():
    stream = BytesIO()
@@ -37,13 +33,14 @@ def continuous_capture():
        Image.open(stream).save(filename)
        stream.seek(0)
        stream.truncate()
-       print(filename, datetime.now)
+       print(filename, datetime.now())
        sleep(wait)
 
        if number == no_of_images:
            break
            
-preview_button.when_pressed = toggle
+preview_button.when_pressed = camera.start_preview
+preview_button.when_released = camera.stop_preview
 capture_button.when_pressed = continuous_capture
 print("The Program is running")
 ```
