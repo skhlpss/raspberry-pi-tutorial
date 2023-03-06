@@ -11,7 +11,7 @@ cd /home/pi/timelapse
 # 顯示所有文件
 ls 
 
-# 清除所有 jpg 文件
-rm *.jpg
+# 清除所有文件
+rm *
 ```
 
