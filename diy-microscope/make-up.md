@@ -22,7 +22,7 @@
 
 利用鋏子，取出洋葱的表皮細胞。
 
-<figure><img src="../.gitbook/assets/IMG_1055 copy.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/picamera_white_cover" alt=""><figcaption></figcaption></figure>
 
 把洋葱表皮細胞放上甘油上
 
@@ -42,4 +42,4 @@
 
 再把洋葱裝置放在白色膠蓋上。
 
-<figure><img src="../.gitbook/assets/diy-microscope-result (2).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/microscope_product.jpg" alt=""><figcaption></figcaption></figure>
