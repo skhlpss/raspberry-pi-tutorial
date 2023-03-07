@@ -4,7 +4,7 @@
 
 <figure><img src="../.gitbook/assets/IMG_1041.jpeg" alt=""><figcaption></figcaption></figure>
 
-&#x20;把較剪插入蓋孔後，轉動較剪擴大蓋孔。
+把較剪插入蓋孔後，轉動較剪擴大蓋孔。
 
 <figure><img src="../.gitbook/assets/IMG_1050 copy.png" alt=""><figcaption></figcaption></figure>
 
@@ -34,8 +34,7 @@
 
 用膠把洋葱表皮細胞及膠片固定好在水樽上，然後把擰上水樽蓋。洋葱裝置製作完成。
 
-<figure><img src="../.gitbook/assets/
-.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/.jpeg" alt=""><figcaption></figcaption></figure>
 
 把透明膠珠放在白色膠蓋中
 
@@ -43,4 +42,4 @@
 
 再把洋葱裝置放在白色膠蓋上。
 
-<figure><img src="../.gitbook/assets/diy-microscope-result.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/diy-microscope-result (2).jpg" alt=""><figcaption></figcaption></figure>
