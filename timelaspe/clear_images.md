@@ -1,6 +1,6 @@
 # 清除所有相片
 
-以下步驟讓你快捷地清除在 `/home.pi/timelapse` 文件夾中的所有文件。
+以下步驟讓你快捷地清除在 `/home/pi/timelapse` 文件夾中的所有文件。
 
 首先打開 `Terminal`
 
@@ -9,13 +9,13 @@
 然後輸入以下指令
 
 ```sh
-# 轉到文件夾
-cd /home/pi/timelapse
+# 到以下文件夾
+cd /home/pi/Desktop/timelapse
 
 # 顯示所有文件
 ls 
 
-# 清除所有文件
+# 清除所有文件，rm 代表 remove；* 代表所有
 rm *
 ```
 

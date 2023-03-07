@@ -13,18 +13,20 @@
 * [安裝](settings/setup.md)
 * [設定及使用 Raspberry Pi](settings/configuration.md)
 
-## GPIOZERO 及傳感器的應用 <a href="#gpiozero" id="gpiozero"></a>
+## GPIO 及傳感器的應用 <a href="#gpio" id="gpio"></a>
 
-* [基本認識](gpiozero/basic.md)
-* [認識閉合電路](gpiozero/complete\_circuit.md)
-* [Ex1 - LED](application-of-gpiozero-and-sensors/ex1-led.md)
-* [Ex2 - Button](application-of-gpiozero-and-sensors/ex2-button.md)
-* [Ex3 - Button controlled LED](application-of-gpiozero-and-sensors/ex3-button-controlled-led.md)
-* [Ex4 - Reaction Game](application-of-gpiozero-and-sensors/ex4-reaction-game.md)
-* [Ex5 - Distance Sensor](application-of-gpiozero-and-sensors/ex5-distance-sensor.md)
+* [簡介](gpio/introduction.md)
+* [基本認識](gpio/basic.md)
+* [認識閉合電路](gpio/complete\_circuit.md)
+* [Ex1 - LED](gpio/ex1-led.md)
+* [Ex2 - Button](gpio/ex2-button.md)
+* [Ex3 - Button controlled LED](gpio/ex3-button-controlled-led.md)
+* [Ex4 - Reaction Game](gpio/ex4-reaction-game.md)
+* [Ex5 - Distance Sensor](gpio/ex5-distance-sensor.md)
 
 ## PiCamera 的應用 <a href="#picamera" id="picamera"></a>
 
+* [簡介](picamera/introduction.md)
 * [接駁鏡頭](picamera/connect\_to\_camera.md)
 * [Ex5 Button controlled camera](application-of-picamera/ex5-button-controlled-camera.md)
 * [Ex6 Webcam](application-of-picamera/ex6-webcam.md)

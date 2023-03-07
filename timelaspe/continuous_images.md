@@ -1,6 +1,6 @@
 # 拍攝連續照片
 
-&#x20;開新檔案 `continuous_images.py` ，連接2個按扭到 `GPIO5` 及 `GPIO6`， 分別控制預覽 `preview` 及啟動連續拍照 `continuous_capture`。
+開新檔案 `continuous_images.py` ，連接2個按扭到 `GPIO5` 及 `GPIO6`， 分別用作控制預覽 `preview` 及啟動連續拍照 `continuous_capture`。
 
 {% code title="continuous_images.py" lineNumbers="true" %}
 ```python
@@ -11,12 +11,17 @@ from PIL import Image
 from time import sleep
 from datetime import datetime
 from io import BytesIO
+from os import makedirs, path
 
 preview_button = Button(5)
 capture_button = Button(6)
 camera = PiCamera()
 
-captureDir = '/home/pi/timelapse'
+captureDir = '/home/pi/Desktop/timelapse'
+
+if not path.exists(captureDir):
+    makedirs(capture)
+
 wait = float('每張相片相隔多少秒？ '))
 no_of_images = int(input('總共要拍多少張相片？ '))
 

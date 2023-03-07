@@ -15,9 +15,15 @@ sudo apt install imagemagick
 打開 `Terminal` 並輸入以下指令，以下例子是製作一段 18 FPS 的影片。
 
 ```sh
-cd /home/pi/timelapse
+# 到以下文件夾，cd 代表 change directory
+cd /home/pi/Desktop/timelapse
 
-# Merge all images to videos
-# -r 每一秒的 frame rate 
-ffmpeg -r 18 -i ./%03d.jpg output.mp4
+# 顯示所有文件，ls 代表 list
+ls
+
+# 將所有相片轉成影片，並儲存在 ../ ，即是 timelapse 的上一層 Desktop
+# 檔案名為 output.mp4
+# -r 代表每一秒的 frame rate 
+# -i 代表滙入檔案的格式，%3d 表示3位數字
+ffmpeg -r 18 -i ./%03d.jpg ../output.mp4
 ```
