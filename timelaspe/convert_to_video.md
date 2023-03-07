@@ -12,7 +12,7 @@ sudo apt install imagemagick
 ```
 {% endcode %}
 
-打開 `Terminal` 並輸入以下指令，以下例子是制作一段 18 FPS 的影片。
+打開 `Terminal` 並輸入以下指令，以下例子是製作一段 18 FPS 的影片。
 
 ```sh
 cd /home/pi/timelapse
