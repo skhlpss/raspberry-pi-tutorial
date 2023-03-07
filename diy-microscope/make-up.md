@@ -14,7 +14,7 @@
 
 𠝹開膠樽，取出膠樽的頂部分及一塊膠片
 
-<figure><img src="../.gitbook/assets/IMG_1080.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/water_bottle.jpeg" alt=""><figcaption></figcaption></figure>
 
 在膠片上滴上一至兩滴甘油
 
@@ -34,15 +34,13 @@
 
 用膠把洋葱表皮細胞及膠片固定好在水樽上，然後把擰上水樽蓋。洋葱裝置製作完成。
 
-<figure><img src="../.gitbook/assets/IMG_1077.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/
+.jpeg" alt=""><figcaption></figcaption></figure>
 
 把透明膠珠放在白色膠蓋中
 
-<figure><img src="../.gitbook/assets/IMG_1082 2 copy.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/picamera_white_cover.jpeg" alt=""><figcaption></figcaption></figure>
 
 再把洋葱裝置放在白色膠蓋上。
 
-<figure><img src="../.gitbook/assets/IMG_1084 (2).jpg" alt=""><figcaption></figcaption></figure>
-
-
-
+<figure><img src="../.gitbook/assets/diy-microscope-result.jpg" alt=""><figcaption></figcaption></figure>
