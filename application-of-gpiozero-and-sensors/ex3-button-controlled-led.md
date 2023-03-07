@@ -26,7 +26,7 @@ pause()
 
 ## 任務 2
 
-另開新檔， `button_led_2.py。`修改以上程式碼，使得當按下按扭時會開啟／閃動 `LED`，放手時會關閉 `LED`。或許你需要以下連結中的資料。
+另開新檔， `button_led_2.py`。參考 Ex2 - Button 中的[任務4](ex2-button.md#ren-wu-4)，修改以上程式碼，讓你可以在當按下按扭時開啟／閃動 `LED`，放手時會關閉 `LED`。以下是你可能需要用的資料連結。
 
 * [`led.on`](https://gpiozero.readthedocs.io/en/stable/api\_output.html#gpiozero.LED.on)
 * [`led.off`](https://gpiozero.readthedocs.io/en/stable/api\_output.html#gpiozero.LED.off)
