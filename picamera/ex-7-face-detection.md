@@ -7,14 +7,15 @@
 輸入以下指令，以安裝所須套件，安裝時間頗長，請耐心等候。
 
 ```sh
-sudo apt-get install python-opencv
+sudo apt-get install libatlas-base-dev
+pip3 install opencv-python
 pip3 install face_recognition
 
 ```
 
-開啟新檔 `recognition.py` ，然後執行程式。
+開啟新檔 `face_detection.py` ，然後執行程式。
 
-{% code title="recognition.py" lineNumbers="true" %}
+{% code title="face_detection.py" lineNumbers="true" %}
 ```python
 from picamera import PiCamera
 from time import sleep
@@ -29,7 +30,7 @@ camera = PiCamera()
 camera.start_preview()
 sleep(5)
 camera.capture(image_path)
-camera.stop_preview()
+camera.close()
 
 sleep(3)
 # Get a reference to webcam #0 (the default one)
