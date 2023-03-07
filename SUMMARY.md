@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Raspberry Pi Tutorial](README.md)
+* [Raspberry Pi Tutorials](README.md)
 
 ## 簡介 <a href="#introduction" id="introduction"></a>
 
