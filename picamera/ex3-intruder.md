@@ -1,4 +1,4 @@
-# Ex 7 Intruder
+# Ex3 - Intruder
 
 &#x20;打開 `Terminal`
 
@@ -7,7 +7,12 @@
 輸入以下指令，以安裝所須套件，安裝時間頗長，請耐心等候。
 
 ```sh
-sudo apt-get install libatlas-base-dev
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y libopencv-*
+sudo apt-get install -y libatlas-base-dev
+sudo apt-get install -y libgtk2.0-dev
+sudo apt-get install -y python3-opencv
 pip3 install opencv-python
 pip3 install face_recognition
 ```
