@@ -41,9 +41,8 @@ while username != '':
 
     username = input('下一個登記的使用者：(按空白跳過) ')
 
-print('登記完成')
 camera.close()
-
+print('登記完成')
 ```
 {% endcode %}
 
