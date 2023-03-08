@@ -28,9 +28,9 @@
 
 * [簡介](picamera/introduction.md)
 * [接駁鏡頭](picamera/connect\_to\_camera.md)
-* [Ex5 Button controlled camera](application-of-picamera/ex5-button-controlled-camera.md)
-* [Ex6 Webcam](application-of-picamera/ex6-webcam.md)
-* [Ex 7 Intruder](picamera/ex-7-intruder.md)
+* [Ex1 - Button controlled camera](application-of-picamera/ex5-button-controlled-camera.md)
+* [Ex2 - Webcam](application-of-picamera/ex6-webcam.md)
+* [Ex3 - Intruder](picamera/ex3-intruder.md)
 
 ## 製作顯微鏡 <a href="#diy-microscope" id="diy-microscope"></a>
 
