@@ -8,8 +8,7 @@
 
 ```sh
 sudo apt update -y
-sudo apt install -y python3-opencv
-sudo apt install -y libatlas-base-dev
+sudo apt install -y python3-opencv libatlas-base-dev
 pip3 install face_recognition
 ```
 
