@@ -1,4 +1,4 @@
-# Ex 7 Face Detection
+# Ex 7 Intruder
 
 &#x20;打開 `Terminal`
 
@@ -12,52 +12,76 @@ pip3 install opencv-python
 pip3 install face_recognition
 ```
 
-開啟新檔 `face_detection.py` ，將 `LED` 連接到 `GPIO5` 然後執行程式。
+開新檔案 `registration.py`。 利用以下程式登記使用者。
 
-{% code title="face_detection.py" lineNumbers="true" %}
-````python
+{% code title="registration" lineNumbers="true" %}
 ```python
 from picamera import PiCamera
-from gpiozero import LED
 from time import sleep
+from os import makedirs, path
+
+registration_directory = '/home/pi/registration'
+
+if not path.exists(registration_directory):
+    makedirs(registration_directory)
+    
+camera = PiCamera()
+
+username = input('登記的使用者 (按空白跳過)： ')
+
+if username == '':
+    exit()
+
+camera.start_preview()
+
+while username != '':
+    image_path = f'{registration_directory}/{username}.jpg'
+    sleep(5)
+    camera.capture(image_path)
+    camera.stop_preview()
+
+    username = input('下一個登記的使用者：(按空白跳過) ')
+
+print('登記完成')
+camera.close()
+
+```
+{% endcode %}
+
+開啟新檔 `intruder.py` ，將 `LED` 連接到 `GPIO5` 然後執行程式。
+
+{% code title="intruder.py" lineNumbers="true" %}
+```python
+from gpiozero import LED
+from os import listdir, path
+
 import face_recognition
 import cv2
 import numpy as np
 
-camera = PiCamera()
 led = LED(5)
 
 # 用作儲存已登記的 face_encoding 及 name
 known_face_encodings = []
 known_face_names = []
 
-username = input('使用者名稱 (按空白跳過)： ')
+registration_directory = '/home/pi/registration'
 
-if username == '':
+# 如果未有 registration_directory, 將關閉程式
+if not path.exists(registration_directory):
     exit()
 
-while username != '':
-    camera.start_preview()
-    image_path = f'/home/pi/{username}.jpg'
-    sleep(5)
-    camera.capture(image_path)
-    sleep(1)
-    camera.stop_preview()
-    # Load a sample picture and learn how to recognize it.
-    user_image = face_recognition.load_image_file(image_path)
+# 從 registration_directory 中，載入並識別圖片
+for image_file in listdir(registration_directory)
+    filename, ext = path.splitext(image_file)
+    user_image = face_recognition.load_image_file(image_file)
     face_encoding = face_recognition.face_encodings(user_image)[0]
 
     known_face_encodings.append(face_encoding)
-    known_face_names.append(username)
+    known_face_names.append(filename)
 
-    username = input('使用者名稱 (按空白跳過)： ')
-
-camera.close()
-
-# Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-# Initialize some variables
 face_locations = []
 face_encodings = []
 face_names = []
@@ -65,10 +89,8 @@ process_this_frame = True
 UNKNOWN = "Unknown"
 
 while True:
-    # Grab a single frame of video
     ret, frame = video_capture.read()
 
-    # Only process every other frame of video to save time
     if process_this_frame:
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
@@ -81,7 +103,6 @@ while True:
 
         face_names = []
         for face_encoding in face_encodings:
-            # See if the face is a match for the known face(s)
             matches = face_recognition.compare_faces(
                 known_face_encodings, face_encoding
             )
@@ -100,25 +121,17 @@ while True:
             face_names.append(name)
 
     process_this_frame = not process_this_frame
-    
-    try:
-        face_names.find(UNKNOWN)
-        led.on()
-    except:
-        led.off()
+    led.off()
 
-    # Display the results
+    # 顯示結果
     for (top, right, bottom, left), name in zip(face_locations, face_names):
-        # Scale back up face locations since the frame we detected in was scaled to 1/4 size
         top *= 4
         right *= 4
         bottom *= 4
         left *= 4
-
-        # Draw a box around the face
+        
+        # 畫上方框 
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
-
-        # Draw a label with a name below the face
         cv2.rectangle(
             frame,
             (left, bottom - 35),
@@ -126,6 +139,8 @@ while True:
             (0, 0, 255),
             cv2.FILLED
         )
+        
+        # 寫上名稱 
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(
             frame,
@@ -136,18 +151,21 @@ while True:
             (255, 255, 255),
             1
         )
+        
+        # 如果發現有未登錄的人，會亮起 LED
+        try:
+            face_names.find(UNKNOWN)
+            led.on()
+        except:
+            led.off()
 
-    # Display the resulting image
     cv2.imshow('Video', frame)
 
-    # Hit 'q' on the keyboard to quit!
+    # 按 'q' 關閉程式
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Release handle to the webcam
 video_capture.release()
 cv2.destroyAllWindows()
-
 ```
-````
 {% endcode %}
