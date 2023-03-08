@@ -32,9 +32,8 @@ username = input('登記的使用者 (按空白跳過)： ')
 if username == '':
     exit()
 
-camera.start_preview()
-
 while username != '':
+    camera.start_preview()
     image_path = f'{registration_directory}/{username}.jpg'
     sleep(5)
     camera.capture(image_path)
@@ -52,9 +51,8 @@ camera.close()
 
 {% code title="intruder.py" lineNumbers="true" %}
 ```python
-from gpiozero import LED
 from os import listdir, path
-
+from gpiozero import LED
 import face_recognition
 import cv2
 import numpy as np
@@ -72,10 +70,12 @@ if not path.exists(registration_directory):
     exit()
 
 # 從 registration_directory 中，載入並識別圖片
-for image_file in listdir(registration_directory)
+for image_file in listdir(registration_directory):
     filename, ext = path.splitext(image_file)
-    user_image = face_recognition.load_image_file(image_file)
-    face_encoding = face_recognition.face_encodings(user_image)[0]
+    if ext == '.jpg':
+        image_location = path.join(registration_directory, image_file)
+        user_image = face_recognition.load_image_file(image_location)
+        face_encoding = face_recognition.face_encodings(user_image)[0]
 
     known_face_encodings.append(face_encoding)
     known_face_names.append(filename)
@@ -93,7 +93,6 @@ while True:
 
     if process_this_frame:
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-
         rgb_small_frame = small_frame[:, :, ::-1]
 
         face_locations = face_recognition.face_locations(rgb_small_frame)
@@ -113,10 +112,10 @@ while True:
 
             best_match_index = np.argmin(face_distances)
 
+            name = UNKNOWN
+
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
-            else:
-                name = UNKNOWN
 
             face_names.append(name)
 
@@ -129,8 +128,8 @@ while True:
         right *= 4
         bottom *= 4
         left *= 4
-        
-        # 畫上方框 
+
+        # 畫上方框
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
         cv2.rectangle(
             frame,
@@ -139,8 +138,8 @@ while True:
             (0, 0, 255),
             cv2.FILLED
         )
-        
-        # 寫上名稱 
+
+        # 寫上名稱
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(
             frame,
@@ -151,13 +150,13 @@ while True:
             (255, 255, 255),
             1
         )
-        
+
         # 如果發現有未登錄的人，會亮起 LED
         try:
-            face_names.find(UNKNOWN)
+            face_names.index(UNKNOWN)
             led.on()
         except:
-            led.off()
+            pass
 
     cv2.imshow('Video', frame)
 
