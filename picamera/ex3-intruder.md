@@ -7,13 +7,9 @@
 輸入以下指令，以安裝所須套件，安裝時間頗長，請耐心等候。
 
 ```sh
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -y libopencv-*
-sudo apt-get install -y libatlas-base-dev
-sudo apt-get install -y libgtk2.0-dev
-sudo apt-get install -y python3-opencv
-pip3 install opencv-python
+sudo apt update -y
+sudo apt install -y python3-opencv
+sudo apt install -y libatlas-base-dev
 pip3 install face_recognition
 ```
 
