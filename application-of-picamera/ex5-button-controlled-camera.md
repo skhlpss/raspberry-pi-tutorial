@@ -3,7 +3,7 @@ description: >-
   https://gpiozero.readthedocs.io/en/stable/recipes.html#button-controlled-camera
 ---
 
-# Ex5 Button controlled camera
+# Ex1 - Button controlled camera
 
 ## 任務 1
 
@@ -51,7 +51,7 @@ camera = PiCamera()
 def capture():
     timestamp = datetime.now().isoformat()
     camera.capture('/home/pi/%s.jpg' % timestamp)
-    camera.stop_preview
+    camera.stop_preview()
 
 left_button.when_pressed = camera.start_preview
 right_button.when_pressed = capture
