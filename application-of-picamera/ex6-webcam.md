@@ -2,7 +2,7 @@
 description: https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming
 ---
 
-# Ex6 Webcam
+# Ex2 - Webcam
 
 ## 任務 1
 
@@ -93,7 +93,7 @@ with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
     output = StreamingOutput()
     camera.start_recording(output, format='mjpeg')
     try:
-        address = ('', 80)
+        address = ('', 8080)
         server = StreamingServer(address, StreamingHandler)
         server.serve_forever()
     finally:
@@ -109,4 +109,4 @@ with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
 
 <figure><img src="../.gitbook/assets/check-ip.png" alt=""><figcaption></figcaption></figure>
 
-把你的手機連接與 `Raspberry Pi` 相同的無線網絡，在你的手機中，打開網頁。在網址一欄中，輸入你剛取得的 `IP` 位置。現在你的手機能看到 `Raspberry Pi` 鏡頭的影像嗎？
+把你的手機連接與 `Raspberry Pi` 相同的無線網絡，在你的手機中，打開網頁。在網址一欄中，輸入你剛取得的 `IP` 位置 `IP` 後加上 `:8080` 例如，我取得的 `IP` 是 `10.20.0.89`， 那麼手機輸的的網址是`10.20.0.89:8080`。現在你的手機能看到 `Raspberry Pi` 鏡頭的影像嗎？
