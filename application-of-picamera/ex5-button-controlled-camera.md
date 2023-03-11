@@ -35,7 +35,7 @@ pause()
 
 ## 任務 2
 
-另開新檔 `button_camera_2.py`。試按以下程式碼連接所需裝置，然後細閱程式碼，你預計會出現甚麼結果？
+另開新檔 `button_camera_2.py`。試按以下程式碼<mark style="color:red;background-color:red;">**連接所需裝置**</mark>，然後細閱程式碼，你預計會出現甚麼結果？
 
 {% code title="button_camera_2.py" lineNumbers="true" %}
 ```python
