@@ -20,9 +20,9 @@ camera = PiCamera()
 captureDir = '/home/pi/Desktop/timelapse'
 
 if not path.exists(captureDir):
-    makedirs(capture)
+    makedirs(captureDir)
 
-wait = float('每張相片相隔多少秒？ '))
+wait = float(input('每張相片相隔多少秒？ '))
 no_of_images = int(input('總共要拍多少張相片？ '))
 
 def continuous_capture():
