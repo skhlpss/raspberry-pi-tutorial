@@ -92,11 +92,12 @@ while True:
 
     if process_this_frame:
         small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-        rgb_small_frame = small_frame[:, :, ::-1]
+        code = cv2.COLOR_BGR2RGB
+        rgb_small_frame = cv2.cvtColor(small_frame, code)
 
         face_locations = face_recognition.face_locations(rgb_small_frame)
         face_encodings = face_recognition.face_encodings(
-            small_frame, face_locations
+            rgb_small_frame, face_locations
         )
 
         face_names = []
