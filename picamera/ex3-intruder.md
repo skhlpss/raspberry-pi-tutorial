@@ -27,7 +27,7 @@ if not path.exists(registration_directory):
     
 camera = PiCamera()
 
-username = input('登記的使用者 (按空白跳過)： ')
+username = input('登記的使用者 (按Enter跳過)： ')
 
 if username == '':
     exit()
@@ -39,7 +39,7 @@ while username != '':
     camera.capture(image_path)
     camera.stop_preview()
 
-    username = input('下一個登記的使用者：(按空白跳過) ')
+    username = input('下一個登記的使用者：(按Enter跳過) ')
 
 camera.close()
 print('登記完成')
@@ -96,7 +96,7 @@ while True:
 
         face_locations = face_recognition.face_locations(rgb_small_frame)
         face_encodings = face_recognition.face_encodings(
-            rgb_small_frame, face_locations
+            small_frame, face_locations
         )
 
         face_names = []
