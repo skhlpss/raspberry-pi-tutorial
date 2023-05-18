@@ -50,7 +50,7 @@ camera = PiCamera()
 
 def capture():
     timestamp = datetime.now().isoformat()
-    camera.capture('/home/pi/%s.jpg' % timestamp)
+    camera.capture(f'/home/pi/{timestamp}.jpg')
     camera.stop_preview()
 
 left_button.when_pressed = camera.start_preview
