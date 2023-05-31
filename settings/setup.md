@@ -2,7 +2,11 @@
 
 取出 SD Card 及 Raspberry Pi
 
+<div align="center">
+
 <figure><img src="../.gitbook/assets/IMG_1011.jpeg" alt=""><figcaption><p>取出 SD Card 及 Raspberry Pi</p></figcaption></figure>
+
+</div>
 
 將 SD Card （細咭）插入 Raspberry Pi 中
 

@@ -8,7 +8,7 @@ description: https://gpiozero.readthedocs.io/en/stable/recipes.html#distance-sen
 
 另開新檔 `distance.py` 利用以程式碼使 `Distance Sensor` 檢測到最近物體的距離
 
-<img src="https://em-content.zobj.net/thumbs/120/softbank/145/warning-sign_26a0.png" alt="Warning on SoftBank 2014" data-size="line">**同學**<mark style="color:red;">**必須注意**</mark>**四支針腳的名稱，分別是 `VCC`, `Trig`, `Echo`, `GND`，不可以連接錯誤**<img src="https://em-content.zobj.net/thumbs/120/softbank/145/warning-sign_26a0.png" alt="Warning on SoftBank 2014" data-size="line">****
+<img src="https://em-content.zobj.net/thumbs/120/softbank/145/warning-sign_26a0.png" alt="Warning on SoftBank 2014" data-size="line">**同學**<mark style="color:red;">**必須注意**</mark>**四支針腳的名稱，分別是 `VCC`, `Trig`, `Echo`, `GND`，不可以連接錯誤**<img src="https://em-content.zobj.net/thumbs/120/softbank/145/warning-sign_26a0.png" alt="Warning on SoftBank 2014" data-size="line">
 
 <figure><img src="../.gitbook/assets/distance_sensor.png" alt=""><figcaption></figcaption></figure>
 

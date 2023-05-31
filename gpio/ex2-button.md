@@ -43,7 +43,7 @@ print("Button was pressed")
 
 ## 任務 3
 
-另開新檔 `` ，了解以下程式碼，當每次按下按鈕時，會執行 `say_hello`。
+另開新檔  ，了解以下程式碼，當每次按下按鈕時，會執行 `say_hello`。
 
 {% code title="button_say_hello.py" lineNumbers="true" %}
 ```python
