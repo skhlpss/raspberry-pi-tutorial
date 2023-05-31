@@ -1,5 +1,7 @@
 # 簡介
 
+<figure><img src="../.gitbook/assets/timelapse_example.gif" alt=""><figcaption></figcaption></figure>
+
 利用微型電腦拍攝縮時照片，並透過 Linux Command 程式，將照片合成影片。當中需要計算拍攝照片相隔的時間及相片的數目。
 
 ## 甚麼是 FPS
